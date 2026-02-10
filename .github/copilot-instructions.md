@@ -3,7 +3,6 @@
 ## Padrões de Código
 - Use TypeScript para arquivos JS.
 - Use arrow functions (`() => {}`) em vez de funções nomeadas.
-- Utilize Tailwind CSS para estilização, mantendo classes consistentes.
 - Nomes de variáveis devem ser em camelCase.
 
 ## Padrões de Estrutura
