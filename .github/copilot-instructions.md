@@ -1,32 +1,26 @@
-# React Development Guidelines
+# Instruções do GitHub Copilot
 
-## Code Style and Conventions
+## Padrões de Código
+- Use TypeScript para arquivos JS.
+- Use arrow functions (`() => {}`) em vez de funções nomeadas.
+- Utilize Tailwind CSS para estilização, mantendo classes consistentes.
+- Nomes de variáveis devem ser em camelCase.
 
-- Use functional components with hooks instead of class components
-- Prefer TypeScript for type safety when available
-- Use descriptive and meaningful variable names
-- Follow camelCase for variables and functions, PascalCase for components
-
-## Component Structure
-
-- Keep components small and focused on a single responsibility
-- Extract reusable logic into custom hooks
-- Use composition over inheritance
-- Place components in their own files with the same name as the component
+## Padrões de Estrutura
+- Componentes React devem ser eficientes e reutilizáveis.
+- Componentização é prioridade. Componentize sempre que puder.          
+- Componentes não devem ter lógica e regras de negócio, apenas renderização.
+- Toda lógica usada nos componentes deve ser criado em hooks customizados que pode estar na mesma pasta do componente.
 
 ## State Management
-
-- Use `useState` for local component state
-- Use `useEffect` for side effects
-- Use `useContext` for sharing state across components
-- Consider using `useReducer` for complex state logic
-- Prefer state colocation - keep state as close to where it's used as possible
+- Declare todos os states juntos
+- Declare todos os hooks juntos
+- Declare todos os useEffect juntos
 
 ## Props and Types
 
 - Always define prop types (TypeScript interfaces or PropTypes)
-- Use destructuring for props
-- Provide default values for optional props
+- Use destructuring for props only when there's less then 3 props
 - Keep prop drilling to a minimum
 
 ## Hooks Best Practices
@@ -48,8 +42,6 @@
 
 - Group related components in feature folders
 - Keep utility functions in separate files
-- Use index files for cleaner imports
-- Separate business logic from UI components
 
 ## Testing
 
@@ -58,16 +50,9 @@
 - Use React Testing Library for component tests
 - Mock external dependencies appropriately
 
-## Styling
-
-- Use consistent styling approach (CSS Modules, styled-components, or Tailwind)
-- Keep styles modular and component-scoped
-- Avoid inline styles unless necessary for dynamic values
-- Use CSS variables for theming
-
 ## Error Handling
-
 - Implement Error Boundaries for graceful error handling
 - Handle loading and error states in async operations
 - Provide meaningful error messages to users
 - Log errors appropriately for debugging
+- Handle empty states with adequate icon, component and text
